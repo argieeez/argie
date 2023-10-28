@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    
+
     <title>My Work Portfolio</title>
     <style>
         body {
@@ -10,7 +11,7 @@
             margin: 0;
             padding: 0;
         }
-        
+
         header {
             background-color: #5C6AC4;
             color: white;
@@ -19,21 +20,42 @@
             position: relative;
             border-bottom: 2px solid #333;
         }
+
         h1 {
             font-size: 36px;
         }
+
         .content {
             padding: 20px;
         }
-        
-        .about-me-section, .work-experience-section, .projects-section {
+
+        .about-me-section,
+        .work-experience-section,
+        .projects-section {
             background-color: #E0E0E0;
             border: 2px solid #333;
             border-radius: 10px;
             padding: 20px;
             margin: 20px 0;
         }
-        
+
+          .section-link {
+          display: inline-block;
+          padding: 10px 20px;
+          color: #fff;
+          background-color: #5C6AC4;
+          text-decoration: none;
+          margin: 0 10px; /* Add margin to create space between buttons */
+          border: 2px solid transparent;
+          border-radius: 5px;
+          transition: background 0.3s, border 0.3s; /* Add transition for smooth hover effect */
+      }
+      
+      .section-link:hover {
+          background: linear-gradient(to right, #5C6AC4, #FF5733); /* Gradient background color on hover */
+          border: 2px solid #FF5733; /* Border color on hover */
+      }
+
         .animated-text {
             position: absolute;
             bottom: 10px;
@@ -41,7 +63,7 @@
             transform: translateX(-50%);
             animation: moveText 2s linear infinite;
         }
-        
+
         .timeline-section {
             background-color: #f9f9f9;
             padding: 20px;
@@ -65,35 +87,74 @@
             font-weight: bold;
             margin-bottom: 10px;
         }
+
+        .timeline-event {
+            width: 50%;
+            padding: 20px;
+            margin: 20px auto;
+            background-color: #fff;
+            border: 4px solid #FF5733;
+            /* Change border thickness and color as desired */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s;
+            /* Add this line for the transition effect */
+        }
+
+        .timeline-event .date {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .timeline-event:hover {
+            border-color: #5C6AC4;
+            /* Change this color to your desired hover color */
+        }
         
-     .timeline-event {
-        width: 50%;
-        padding: 20px;
-        margin: 20px auto;
-        background-color: #fff;
-        border: 4px solid #FF5733; /* Change border thickness and color as desired */
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: border-color 0.3s; /* Add this line for the transition effect */
-    }
+            .timeline-event:nth-child(odd) {
+            animation: moveLeft 10s linear infinite;
+        }
+        
+        .timeline-event:nth-child(even) {
+            animation: moveRight 10s linear infinite;
+        }
+        
+        @keyframes moveLeft {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-25%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes moveRight {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(25%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
 
-    .timeline-event .date {
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
 
-   .timeline-event:hover {
-        border-color: #5C6AC4; /* Change this color to your desired hover color */
-    }
 
 
         @keyframes moveText {
             0% {
                 transform: translateX(-50%);
             }
+
             50% {
                 transform: translateX(-45%);
             }
+
             100% {
                 transform: translateX(-50%);
             }
@@ -118,21 +179,43 @@
 
         .contact-links a:hover {
             text-decoration: underline;
-        }
+        }   
+        
+      .about-me-section:hover {
+        border: 2px solid #FF5733; /* Adjust the border color and thickness as desired */
+    }
 
+    /* Add a permanent border to the "Work Experience" section */
+    .work-experience-section:hover {
+        border: 2px solid #FF5733; /* Adjust the border color and thickness as desired */
+    }
+
+    /* Add a permanent border to the "Projects" section */
+    .projects-section:hover {
+        border: 2px solid #FF5733; /* Adjust the border color and thickness as desired */
+    }
+                    
+                      
+          
         /* Add animation to the logo */
         .logo-img {
             animation: spin 4s linear infinite;
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
     <script src="argie.js"></script>
-    
-    </head>
+
+</head>
+
 <body>
     <header>
         <img class="logo-img" src="20231027_220735_0000.png" width="160" height="160">
@@ -140,7 +223,7 @@
         <p class="animated-text">Please Hire Me</p>
     </header>
     <section id="timeline" class="timeline-section">
-        <h2>My Journey</h2>
+    <h2 style="text-align: center;">My Journey</h2>
         <div class="timeline">
             <div class="timeline-event">
                 <div class="date">2005</div>
@@ -158,85 +241,75 @@
                 <div class="date">2020</div>
                 <p>Launched my personal project XyzApp.</p>
             </div>
-    <nav>
-    <ul>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#work-experience">Work Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    </nav>
-    <main>
-        <!-- Rest of your HTML content here -->
-    </main>
-    <footer style="text-align: center;">
-        <p>&copy; 2023 My Work Portfolio</p>
-    </footer>
+           <nav>
+            <ul>
+                <li><a href="#about-me" class="section-link">About Me</a></li>
+                <li><a href="#work-experience" class="section-link">Work Experience</a></li>
+                <li><a href="#projects" class="section-link">Projects</a></li>
+                <li><a href="#contact" class="section-link">Contact</a></li>
+            </ul>
+          </nav>
+           
 </body>
+
 </html>
 
-    <main>
-        <section id="about-me" class="about-me-section">
-            <h2>About Me</h2>
-            <p>Name: Argie Z. Gonzales</p>
-            <p>I am a professional with extensive experience in the field of information technology (IT). I'm passionate about solving complex problems and creating innovative solutions.</p>
-            
-            <p>Address: Bunducan, Bocaue, Bulacan</p>
-            
-            <p>Throughout my career, I've had the opportunity to work on various IT projects, ranging from software development to IT consulting. I'm dedicated to delivering high-quality results and driving success for my clients and teams.</p>
-            
-            <div style="text-align: center;">
-                <img src="IMG_20231027_232011.jpg" alt="Your Photo" width="200" height="200">
-            </div>
-        </section>
+<main>
+  <section id="about-me" class="section about-me-section">
+        <h2>About Me</h2>
+        <p>Name: Argie Z. Gonzales</p>
+        <p>I am a professional with extensive experience in the field of information technology (IT). I'm passionate about solving complex problems and creating innovative solutions.</p>
 
-        <section id="work-experience" class="work-experience-section">
-            <h2>Work Experience</h2>
-            <p>1. ABC Company - Senior Software Engineer</p>
-            <p>Date: January 2010 - Present</p>
-            <p>Description: Led development teams, designed software solutions, and delivered successful IT projects.</p>
-            
-            <p>2. Tech Inc. - IT Consultant</p>
-            <p>Date: August 2006 - December 2009</p>
-            <p>Description: Provided IT consulting services, conducted system analysis, and implemented solutions for clients.</p>
-        </section>
-        
-        <section id="projects" class="projects-section">
-            <h2>Projects</h2>
-            <p>1. E-commerce Platform Enhancement</p>
-            <p>Date: March 2022 - June 2022</p>
-            <p>Description: Led the development of new features and performance improvements for a large-scale e-commerce platform.</p>
-            
-            <p>2. Financial Analytics Dashboard</p>
-            <p>Date: June 2021 - November 2021</p>
-            <p>Description: Designed and implemented a real-time financial analytics dashboard for a financial services client.</p>
-        </section>
-        
-        <section id="contact" class="contact-section">
-            <h2>Contact</h2>
-            <p>You can reach me through the following:</p>
-            <div class="contact-links">
-                <a href="tel:09466836962">
-                    <img src="phone.png" alt="Phone" width="40" height="40">
-                </a>
-                <a href="https://www.facebook.com/argie.gonzales.30/" target="_blank">
-                    <img src="fb.png" alt="Facebook" width="50" height="40">
-                </a>
-                <a href="https://youtube.com/@argiegonzales1273" target="_blank">
-                    <img src="yt.png" alt="YouTube" width="40" height="40">
-                </a>
-                <a href="mailto:2022100604@bulsu.edu.ph">
-                    <img src="email.png" alt="Email" width="40" height="40">
-                </a>
-            </div>
-        </section>
-    </main>
-    <footer style="text-align: center;">
+        <p>Address: Bunducan, Bocaue, Bulacan</p>
+
+        <p>Throughout my career, I've had the opportunity to work on various IT projects, ranging from software development to IT consulting. I'm dedicated to delivering high-quality results and driving success for my clients and teams.</p>
+
+        <div style="text-align: center;">
+            <img src="IMG_20231027_232011.jpg" alt="Your Photo" width="200" height="200">
+        </div>
+    </section>
+
+    <section id="work-experience" class="work-experience-section">
+        <h2>Work Experience</h2>
+        <p>1. ABC Company - Senior Software Engineer</p>
+        <p>Date: January 2010 - Present</p>
+        <p>Description: Led development teams, designed software solutions, and delivered successful IT projects.</p>
+
+        <p>2. Tech Inc. - IT Consultant</p>
+        <p>Date: August 2006 - December 2009</p>
+        <p>Description: Provided IT consulting services, conducted system analysis, and implemented solutions for clients.</p>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <p>1. E-commerce Platform Enhancement</p>
+        <p>Date: March 2022 - June 2022</p>
+        <p>Description: Led the development of new features and performance improvements for a large-scale e-commerce platform.</p>
+
+        <p>2. Financial Analytics Dashboard</p>
+        <p>Date: June 2021 - November 2021</p>
+        <p>Description: Designed and implemented a real-time financial analytics dashboard for a financial services client.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+        <p>You can reach me through the following:</p>
+        <div class="contact-links">
+            <a href="tel:09466836962">
+                <img src="phone.png" alt="Phone" width="40" height="40">
+            </a>
+            <a href="https://www.facebook.com/argie.gonzales.30/" target="_blank">
+                <img src="fb.png" alt="Facebook" width="50" height="40">
+            </a>
+            <a href="https://youtube.com/@argiegonzales1273" target="_blank">
+                <img src="yt.png" alt="YouTube" width="40" height="40">
+            </a>
+            <a href="mailto:2022100604@bulsu.edu.ph">
+                <img src="email.png" alt="Email" width="40" height="40">
+            </a>
+        </div>
+    </section>
+</main>
+<footer style="text-align: center;">
     <p>&copy; 2023 My Work Portfolio</p>
-    </footer>
-    
-  
- 
-
-
-            
+</footer>
