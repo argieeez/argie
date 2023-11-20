@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Work Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #fffeff;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #5C6AC4;
-            color: white;
+            background-color: #2939a4;
+            color: rgb(244, 228, 4);
             text-align: center;
             padding: 20px;
             position: relative;
-            border-bottom: 2px solid #333;
+            border-bottom: 4px solid #070707;
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 70px;
         }
 
         .content {
@@ -34,26 +35,27 @@
         .projects-section {
             background-color: #E0E0E0;
             border: 2px solid #333;
-            border-radius: 10px;
+            border-radius: 20px;
             padding: 20px;
-            margin: 20px 0;
+            margin: 40px 0;
       
         }
 
           .section-link {
+          font-size: 30px;
           display: inline-block;
           padding: 10px 20px;
-          color: #fff;
-          background-color: #5C6AC4;
+          color: #171616;
+          background-color: #f1f2fa;
           text-decoration: none;
-          margin: 0 10px; /* Add margin to create space between buttons */
+          margin: 0 20px; /* Add margin to create space between buttons */
           border: 2px solid transparent;
           border-radius: 5px;
           transition: background 0.3s, border 0.3s; /* Add transition for smooth hover effect */
       }
       
-      .section-link:hover {
-          background: linear-gradient(to right, #5C6AC4, #FF5733); /* Gradient background color on hover */
+         .section-link:hover {
+          background: linear-gradient(to right, #ececef, #c44a2e); /* Gradient background color on hover */
           border: 2px solid #FF5733; /* Border color on hover */
       }
 
@@ -66,7 +68,7 @@
         }
 
         .timeline-section {
-            background-color: #f9f9f9;
+            background-color: #e0e0e009;
             padding: 20px;
         }
 
@@ -79,7 +81,7 @@
             padding: 20px;
             margin: 20px auto;
             background-color: #fff;
-            border: 2px solid #5C6AC4;
+            border: 4px solid #5C6AC4;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
@@ -183,17 +185,17 @@
         }   
         
       .about-me-section:hover {
-        border: 2px solid #FF5733; /* Adjust the border color and thickness as desired */
+        border: 6px solid #ef4d29; /* Adjust the border color and thickness as desired */
     }
 
     /* Add a permanent border to the "Work Experience" section */
     .work-experience-section:hover {
-        border: 2px solid #FF5733; /* Adjust the border color and thickness as desired */
+        border: 6px solid #FF5733; /* Adjust the border color and thickness as desired */
     }
 
     /* Add a permanent border to the "Projects" section */
     .projects-section:hover {
-        border: 2px solid #FF5733; /* Adjust the border color and thickness as desired */
+        border: 6px solid #FF5733; /* Adjust the border color and thickness as desired */
     }
     
     nav ul {
@@ -233,7 +235,7 @@
     justify-content: center;
 	}
       
-      .work-experience-info,
+.work-experience-info,
 .projects-info {
     text-align: center; /* Center the text content within each section */
        line-height: 0.9;
@@ -276,51 +278,54 @@
 
     </style>
      
-
 </head>
-
 <body>
     <header>
         <img class="logo-img" src="20231027_220735_0000.png" width="160" height="160">
         <h1>Welcome to My Work Portfolio</h1>
         <p class="animated-text">Please Hire Me</p>
     </header>
-    <section id="timeline" class="timeline-section">
-    <h2 style="text-align: center;">My Journey</h2>
+    
+    <nav style="text-align: center; background-color: #ffffff; padding: 10px;"> 
+        <ul>
+            <li><a href="#about-me" class="section-link">About Me</a></li>
+            <li><a href="#work-experience" class="section-link">Work Experience</a></li>
+            <li><a href="#projects" class="section-link">Projects</a></li>
+            <li><a href="#contact" class="section-link">Contact</a></li>
+        </ul>
+    </nav>
+<div class="content" style="padding: 20px;">
+<section id="timeline" class="timeline-section">
+    <h2 style="text-align: center; font-size: 50px;">My Journey</h2>
+
         <div class="timeline">
             <div class="timeline-event">
                 <div class="date">2005</div>
                 <p>Started my career in IT.</p>
             </div>
+
             <div class="timeline-event">
                 <div class="date">2010</div>
                 <p>Joined ABC Company as a Software Engineer.</p>
             </div>
+
             <div class="timeline-event">
                 <div class="date">2015</div>
                 <p>Completed a major project for XYZ Inc.</p>
             </div>
+
             <div class="timeline-event">
                 <div class="date">2020</div>
                 <p>Launched my personal project XyzApp.</p>
             </div>
-           <nav>
-            <ul>
-                <li><a href="#about-me" class="section-link">About Me</a></li>
-                <li><a href="#work-experience" class="section-link">Work Experience</a></li>
-                <li><a href="#projects" class="section-link">Projects</a></li>
-                <li><a href="#contact" class="section-link">Contact</a></li>
-            </ul>
-          </nav>
            
-</body>
-
-</html>
+        </div>
+</section>
 
 <main>
     <section id="about-me" class="section about-me-section">
         <h2>About Me</h2>
-        <div class="about-me-container">
+<div class="about-me-container">
             <div class="about-me-info">
                 <p>Name: Argie Z. Gonzales</p>
                 <p>I am a professional with extensive experience in the field of information technology (IT). I'm passionate about solving complex problems and creating innovative solutions.</p>
@@ -381,3 +386,7 @@
 <footer style="text-align: center;">
     <p>&copy; 2023 My Work Portfolio</p>
 </footer>
+</div>
+
+</body>
+</html>
