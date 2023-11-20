@@ -28,11 +28,12 @@
 
         .content {
             padding: 20px;
-        }
+        }   
 
         .about-me-section,
         .work-experience-section,
         .projects-section {
+            
             background-color: #E0E0E0;
             border: 2px solid #333;
             border-radius: 20px;
@@ -164,12 +165,13 @@
         }
 
         .contact-section {
-            background-color: #5C6AC4;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        background-color: #2939a4;
+        color: rgb(255, 255, 255);
+        padding: 20px;
+        text-align: center;
+        width: 100vw;
         }
-
+         
         .contact-links {
             margin-top: 10px;
         }
@@ -177,7 +179,7 @@
         .contact-links a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
+            
         }
 
         .contact-links a:hover {
@@ -235,45 +237,45 @@
     justify-content: center;
 	}
       
-.work-experience-info,
-.projects-info {
-    text-align: center; /* Center the text content within each section */
-       line-height: 0.9;
-}
+    .work-experience-info,
+    .projects-info {
+        text-align: center; /* Center the text content within each section */
+        line-height: 0.9;
+    }
 
-.about-me-info,
-.about-me-photo {
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transition: transform 0.5s; /* Add transition for smooth flip effect */
-}
+    .about-me-info,
+    .about-me-photo {
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        transition: transform 0.5s; /* Add transition for smooth flip effect */
+    }
 
       
 
-.about-me-info {
-    transform: rotateY(0deg); /* Initial state, face the user */
-}
+    .about-me-info {
+        transform: rotateY(0deg); /* Initial state, face the user */
+    }
 
-.about-me-photo {
-    align-items: flex-end; /* Lower the photo to the vertical center */
-    transform: rotateY(180deg);
-}
+    .about-me-photo {
+        align-items: flex-end; /* Lower the photo to the vertical center */
+        transform: rotateY(180deg);
+    }
 
-/* Apply the flip effect on hover */
-.about-me-section:hover .about-me-info {
-    transform: rotateY(180deg);
-}
-      
+    /* Apply the flip effect on hover */
+    .about-me-section:hover .about-me-info {
+        transform: rotateY(180deg);
+    }
+        
 
-.about-me-section:hover .about-me-photo {
-    transform: rotateY(0deg);
-}
-      .about-me-section {
-    height: 300px;  
-   
+    .about-me-section:hover .about-me-photo {
+        transform: rotateY(0deg);
+    }
+        .about-me-section {
+        height: 300px;  
+    
 		}
 
     </style>
@@ -292,7 +294,9 @@
             <li><a href="#work-experience" class="section-link">Work Experience</a></li>
             <li><a href="#projects" class="section-link">Projects</a></li>
             <li><a href="#contact" class="section-link">Contact</a></li>
+            <li><a href="https://drive.google.com/uc?export=view&id=1zkQjtiy7yUTfWuhKLVFh8g-ZHJSmV5pI" class="section-link">Curriculum Vitae</a></li>
         </ul>
+    
     </nav>
 <div class="content" style="padding: 20px;">
 <section id="timeline" class="timeline-section">
@@ -380,6 +384,7 @@
             <a href="mailto:2022100604@bulsu.edu.ph">
                 <img src="email.png" alt="Email" width="40" height="40">
             </a>
+          
         </div>
     </section>
 </main>
