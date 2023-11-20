@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #fffeff;
+            background-color: rgba(8, 8, 8, 0.925);
             margin: 0;
             padding: 0;
         }
@@ -29,6 +29,7 @@
         .content {
             padding: 20px;
         }   
+        
 
         .about-me-section,
         .work-experience-section,
@@ -67,9 +68,10 @@
             transform: translateX(-50%);
             animation: moveText 2s linear infinite;
         }
+        
 
         .timeline-section {
-            background-color: #e0e0e009;
+            background-color: #e30f8b;
             padding: 20px;
         }
 
@@ -82,7 +84,7 @@
             padding: 20px;
             margin: 20px auto;
             background-color: #fff;
-            border: 4px solid #5C6AC4;
+            border: 6px solid #fe8c00f8;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
@@ -97,7 +99,7 @@
             padding: 20px;
             margin: 20px auto;
             background-color: #fff;
-            border: 4px solid #FF5733;
+            border: 6px solid #080807;
             /* Change border thickness and color as desired */
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -111,7 +113,7 @@
         }
 
         .timeline-event:hover {
-            border-color: #5C6AC4;
+            border-color: rgb(0, 34, 255);
             /* Change this color to your desired hover color */
         }
         
@@ -164,12 +166,16 @@
             }
         }
 
+       
+
         .contact-section {
-        background-color: #2939a4;
-        color: rgb(255, 255, 255);
-        padding: 20px;
-        text-align: center;
-        width: 100vw;
+            background-color: #2939a4;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+            width: calc(100% + 40px); /* Extend the width to the left */
+            margin-left: -20px; /* Compensate for the negative margin on both sides */
+            
         }
          
         .contact-links {
@@ -278,14 +284,92 @@
     
 		}
 
+    .spinner {
+      --size: 50px;
+      --first-block-clr: rgb(5, 120, 242);
+      --second-block-clr: #fed500;
+      --clr: #111;
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+
+    .spinner::after,
+    .spinner::before {
+      box-sizing: border-box;
+      position: absolute;
+      content: "";
+      width: var(--size);
+      height: var(--size);
+      top: 50%;
+      animation: up 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+      left: 50%;
+      background: var(--first-block-clr);
+    }
+
+    .spinner::after {
+      background: var(--second-block-clr);
+      top: calc(50% - var(--size));
+      left: calc(50% - var(--size));
+      animation: down 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+    }
+
+    @keyframes down {
+      0%, 100% {
+        transform: none;
+      }
+
+      25% {
+        transform: translateX(100%);
+      }
+
+      50% {
+        transform: translateX(100%) translateY(100%);
+      }
+
+      75% {
+        transform: translateY(100%);
+      }
+    }
+
+    @keyframes up {
+      0%, 100% {
+        transform: none;
+      }
+
+      25% {
+        transform: translateX(-100%);
+      }
+
+      50% {
+        transform: translateX(-100%) translateY(-100%);
+      }
+
+      75% {
+        transform: translateY(-100%);
+      }
+    }
+    
+  
     </style>
+     <script src="argie.js"></script>
      
 </head>
 <body>
+
+    <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+    </div>
+
     <header>
         <img class="logo-img" src="20231027_220735_0000.png" width="160" height="160">
         <h1>Welcome to My Work Portfolio</h1>
         <p class="animated-text">Please Hire Me</p>
+        <div class="spinner"></div>
     </header>
     
     <nav style="text-align: center; background-color: #ffffff; padding: 10px;"> 
@@ -388,9 +472,10 @@
         </div>
     </section>
 </main>
-<footer style="text-align: center;">
+<footer style="text-align: center; color: yellow;">
     <p>&copy; 2023 My Work Portfolio</p>
 </footer>
+
 </div>
 
 </body>
