@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Work Portfolio</title>
     <style>
+
+
         body {
             font-family: Arial, sans-serif;
             background-color: rgba(8, 8, 8, 0.925);
@@ -43,6 +45,22 @@
       
         }
 
+        .about-me-section {
+            height: 500px; /* Adjust the height as needed */
+            font-size: 30px; 
+    
+		}
+
+        .work-experience-section {
+            height: 500px; /* Adjust the height as needed */
+            font-size: 30px;
+        }
+
+        .projects-section {
+            height: 500px; /* Adjust the height as needed */
+            font-size: 30px;
+        }
+
           .section-link {
           font-size: 30px;
           display: inline-block;
@@ -72,44 +90,32 @@
 
         .timeline-section {
             background-color: #e30f8b;
-            padding: 20px;
+            padding: 60px;
         }
 
         .timeline {
             position: relative;
         }
 
-        .timeline-event {
-            width: 50%;
-            padding: 20px;
-            margin: 20px auto;
-            background-color: #fff;
-            border: 6px solid #fe8c00f8;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .timeline-event .date {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+        .timeline-event p {
+        font-size: 30px; /* Adjust the font size of the paragraph text as needed */
+}
 
         .timeline-event {
-            width: 50%;
-            padding: 20px;
-            margin: 20px auto;
+            width: 60%; /* Adjust the width as needed */
+            padding: 30px; /* Adjust the padding as needed */
+            margin: 30px auto; /* Adjust the margin as needed */
             background-color: #fff;
-            border: 6px solid #080807;
-            /* Change border thickness and color as desired */
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 8px solid #080807; /* Change border thickness and color as desired */
+            border-radius: 15px; /* Adjust the border-radius as needed */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: border-color 0.3s;
-            /* Add this line for the transition effect */
         }
 
         .timeline-event .date {
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 40px;
+            font-size: 24px;
         }
 
         .timeline-event:hover {
@@ -238,7 +244,7 @@
         /* Add styles for the flip effect */
 	.about-me-container {
     perspective: 1000px; /* Define the depth for the 3D effect */
-      text-align: center; /* Center the photo horizontally */
+    text-align: center; /* Center the photo horizontally */
     display: flex;
     justify-content: center;
 	}
@@ -252,22 +258,25 @@
     .about-me-info,
     .about-me-photo {
         justify-content: center;
-        width: 100%;
-        height: 100%;
+        width: 150%;
+        height: 150%;
         position: absolute;
         backface-visibility: hidden;
         transition: transform 0.5s; /* Add transition for smooth flip effect */
+    
     }
 
       
 
     .about-me-info {
         transform: rotateY(0deg); /* Initial state, face the user */
+       
     }
 
     .about-me-photo {
         align-items: flex-end; /* Lower the photo to the vertical center */
         transform: rotateY(180deg);
+      
     }
 
     /* Apply the flip effect on hover */
@@ -279,10 +288,8 @@
     .about-me-section:hover .about-me-photo {
         transform: rotateY(0deg);
     }
-        .about-me-section {
-        height: 300px;  
-    
-		}
+
+
 
     .spinner {
       --size: 50px;
@@ -349,21 +356,23 @@
         transform: translateY(-100%);
       }
     }
-    
-  
-    </style>
+        .animated {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .in-viewport {
+            opacity: 1;
+            transform: translateY(0);
+        }
+            
+     </style>
      <script src="argie.js"></script>
      
 </head>
 <body>
 
-    <div class="wrapper">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="shadow"></div>
-        <div class="shadow"></div>
-    </div>
 
     <header>
         <img class="logo-img" src="20231027_220735_0000.png" width="160" height="160">
@@ -385,7 +394,7 @@
     </nav>
 <div class="content" style="padding: 20px;">
 <section id="timeline" class="timeline-section">
-    <h2 style="text-align: center; font-size: 50px;">My Journey</h2>
+    <h2 style="text-align: center; font-size: 60px;">My Journey</h2>
 
         <div class="timeline">
             <div class="timeline-event">
@@ -412,7 +421,7 @@
 </section>
 
 <main>
-    <section id="about-me" class="section about-me-section">
+    <section id="about-me" class="section about-me-section animated">
         <h2>About Me</h2>
 <div class="about-me-container">
             <div class="about-me-info">
@@ -427,7 +436,7 @@
         </div>
     </section>
    
-    <section id="work-experience" class="work-experience-section">
+    <section id="work-experience" class="work-experience-section animated">
         <h2>Work Experience</h2>
         <div class="work-experience-info">
             <p>1. ABC Company - Senior Software Engineer</p>
@@ -440,7 +449,7 @@
         </div>
     </section>
     
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects-section animated">
         <h2>Projects</h2>
         <div class="projects-info">
             <p>1. E-commerce Platform Enhancement</p>
