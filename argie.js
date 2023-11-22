@@ -4,6 +4,10 @@ function openCurriculumVitae() {
     window.open(curriculumVitaeLink, '_blank');
 }
 
+window.onload = function () {
+    window.scrollTo(0, 0);
+};
+
 document.addEventListener("DOMContentLoaded", function () {
     // Get all the elements you want to animate
     const animatedElements = document.querySelectorAll(".animated");
