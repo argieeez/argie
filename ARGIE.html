@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <title>My Work Portfolio</title>
     <style>
 
@@ -173,14 +174,21 @@
 
        
 
-        .contact-section {
+            .contact-section {
             background-color: #2939a4;
             color: rgb(255, 255, 255);
-            padding: 100px;
+            padding: 50px; /* Adjust the padding as needed */
             text-align: center;
-            width: calc(100% + 40px);
+            width: 100%;
             margin-left: -20px;
-        }
+            }
+
+            @media only screen and (max-width: 600px) {
+            .contact-section {
+                padding: 20px; /* Adjust the padding for smaller screens */
+            }
+            }
+
 
         .contact-links {
             margin-top: 20px;
